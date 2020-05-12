@@ -1,0 +1,136 @@
+{
+  "navigation": [
+    {
+      "name": "Welcome",
+      "url": "/home.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Login",
+      "url": "/html/index.html",
+      "public": true,
+      "location": "none"
+    },
+    {
+      "name": "Invitation",
+      "url": "/html/invitation.html",
+      "public": true,
+      "location": "header"
+    },
+    {
+      "name": "Enrollment",
+      "url": "/html/enrollment.html",
+      "public": true,
+      "location": "header"
+    },
+    {
+      "name": "My Account",
+      "url": "/html/myaccount.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Quick Points",
+      "url": "/html/quickpoints.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Performance Tracking",
+      "url": "/html/performancetracking.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Leaderboard",
+      "url": "/html/leaderboard.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Learn & Earn",
+      "url": "/html/learnandearn.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Shopping",
+      "url": "/html/shopping.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Profile",
+      "url": "/html/profile.html",
+      "public": false,
+      "location": "header"
+    },
+    {
+      "name": "Contact",
+      "url": "/html/contact.html",
+      "public": true,
+      "location": "footer"
+    },
+    {
+      "name": "All Wall",
+      "url": "/html/allwall.html",
+      "public": false,
+      "location": "footer"
+    },
+    {
+      "name": "FAQ",
+      "url": "/html/faq.html",
+      "public": true,
+      "location": "footer"
+    },
+    {
+      "name": "Rules",
+      "url": "/html/rules.html",
+      "public": true,
+      "location": "footer"
+    },
+    {
+      "name": "Terms",
+      "url": "/html/terms.html",
+      "public": true,
+      "location": "footer"
+    },
+    {
+      "name": "Privacy",
+      "url": "/html/privacy.html",
+      "public": true,
+      "location": "footer"
+    },
+    {
+      "name": "Communications",
+      "url": "/html/communications.html",
+      "public": false,
+      "location": "footer"
+    },
+    {
+      "name": "Clients",
+      "url": "/html/clients.html",
+      "public": false,
+      "location": "footer"
+    },
+    {
+      "name": "Who We Are",
+      "url": "/html/whoweare.html",
+      "public": false,
+      "location": "footer"
+    },
+    {
+      "name": "App",
+      "url": "/html/app.html",
+      "public": false,
+      "location": "footer"
+    },
+    {
+      "name": "Logout",
+      "url": "/html/whoweare.html",
+      "public": false,
+      "location": "footer"
+    }
+  ]
+}

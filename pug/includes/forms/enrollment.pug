@@ -1,0 +1,90 @@
+form#form__enrollment(action="")
+    .form-row
+        .col-12.col-md-6
+            .form-group
+                label(for="firstname")  First Name
+                input.form-control#firstName(type="text" class="firstName" name='firstName')
+        .col-12.col-md-6
+            .form-group
+                label(for="lastname")  Last Name
+                input.form-control#lastName(type="text" class="lastName" name='lastName')
+    .form-row 
+        .col-12.col-md-6
+            .form-group
+                label(for="birthdate")  Birth Date
+                input.form-control#birthDate(type="text" class="birthdate" name='birthdate')
+        .col-12.col-md-6
+            .form-group
+                label(for="hiredate")  Hire Date
+                input.form-control#hireDate(type="text" class="hiredate" name='hiredate')
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="emailAddress") Email Address
+                input.form-control#emailAddress(type="text" class="emailAddress" name='emailAddress')
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="phoneNumber") Phone Number
+                input.form-control#phoneNumber(type="text" class="phoneNumber" name='phoneNumber')
+
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="emailAddress") Street Address
+                input.form-control#streetAddress(type="text" class="streetAddress" name='streetAddress')
+    .form-row 
+        .col-12.col-sm-6 
+            .form-group
+                label(for="city") City
+                input.form-control#city(type="text" class="city" name='city')
+        .col-12.col-sm-2
+            .form-group
+                label(for="state") State
+                input.form-control#state(type="text" class="state" name='state')
+        .col-12.col-sm-4
+            .form-group
+                label(for="zipcode") Zip Code
+                input.form-control#zipcode(type="text" class="zipcode" name='zipcode')
+    
+    
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="communicationPreference") Communication Preference
+                select.custom-select
+                    option(value="1") Email
+                    option(value="2") Push Notification
+                    option(value="3") Text (SMS) Message
+
+    
+
+    .form-row
+        .form-group
+            h2 Choose a Password
+            small Passwords must be at least 8 characters and include at least one upper case letter, one lower case letter, and one number.
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="choosePassword") Password
+                input.form-control#choosePassword(type="password" class="choosePassword" name='choosePassword')
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="confirmPassword") Confirm Password
+                input.form-control#confirmPassword(type="password" class="confirmPassword" name='confirmPassword')
+
+    .form-row 
+        .col-12
+            .form-group
+                .form-check 
+                    input.form-check-input(type="checkbox" value="" id="acceptTerms")
+                    label(for="acceptTerms")
+                        span I have read and accept the 
+                        span 
+                            a(href='/html/terms.html') Terms of Use Agreement 
+                        span that governs the site which includes my consent to receive program related emails.
+    
+    
+    .form-group
+        button.btn.btn-primary.login-button.btn-block(href='/html/enrollment.html') Finish Enrollment

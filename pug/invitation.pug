@@ -1,0 +1,11 @@
+extends layout.pug
+
+block main-content
+  main.h-100.d-flex.fullscreen-bg.flex-column(style='background-image: url("../images/ChairsOnBeach.png")')
+    .row.my-auto.mx-auto.w-100.justify-content-center.p-3
+      .col-12.col-sm-10.col-md-8.col-xl-4.bg-white.text-center.login-box.p-4
+        .display-4 Invitation 
+       
+        p.mb-2 Have you been invited to join our program? Enter your Invitation ID below.
+        
+        include ../pug/includes/forms/invitation.pug

@@ -1,0 +1,20 @@
+@import "scss/_variables.scss";
+
+body,
+html {
+  display: flex;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+main {
+  overflow-y: auto;
+}
+
+.fullscreen-bg {
+  @include fullscreen-bg();
+}
+
+form {
+  text-align: left;
+}
