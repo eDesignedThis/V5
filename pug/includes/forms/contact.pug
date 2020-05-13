@@ -1,0 +1,40 @@
+form#form__contact(action="")
+    .form-row
+        .col-12.col-md-6
+            .form-group
+                label(for="firstname")  First Name
+                input.form-control#firstName(type="text" class="firstName" name='firstName')
+        .col-12.col-md-6
+            .form-group
+                label(for="lastname")  Last Name
+                input.form-control#lastName(type="text" class="lastName" name='lastName')
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="emailAddress") Email Address
+                input.form-control#emailAddress(type="text" class="emailAddress" name='emailAddress')
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="phoneNumber") Phone Number
+                input.form-control#phoneNumber(type="text" class="phoneNumber" name='phoneNumber')    
+    
+    .form-row 
+        .col-12 
+            .form-group
+                label(for="communicationPreference") Subject
+                select.custom-select
+                    option(value="1") Email
+                    option(value="2") Push Notification
+                    option(value="3") Text (SMS) Message
+
+    .form-row 
+        .col-12 
+            .form-group 
+                label(for="contactMessage") Your Message
+                textarea#contactMessage.form-control(name="contactMessage", rows="3")
+
+    .form-row
+        .col-xl-6.mx-auto
+            .form-group
+                button.btn.btn-primary.login-button.btn-block(href='#') Send Message

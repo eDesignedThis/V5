@@ -127,9 +127,9 @@
       "location": "footer"
     },
     {
-      "name": "Logout",
-      "url": "/html/whoweare.html",
-      "public": false,
+      "name": "Login",
+      "url": "/html/index.html",
+      "public": true,
       "location": "footer"
     }
   ]

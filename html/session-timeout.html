@@ -28,22 +28,14 @@
   <main class="h-100 d-flex fullscreen-bg flex-column" style="background-image: url(&quot;../images/ChairsOnBeach.png&quot;)">
     <div class="row my-auto mx-auto w-100 justify-content-center p-3">
       <div class="col-12 col-sm-10 col-md-8 col-xl-6 bg-white text-center login-box p-4">
-        <div class="display-4">Invitation </div>
-        <p class="lead mb-2">Step <span class="font-weight-bold">1 </span><span>of </span><span class="text-muted">2</span></p>
-        <p class="mb-2">Have you been invited to join our program? Enter your Invitation ID below.</p>
-        <form id="form__invitation" action="">
-          <div class="form-group">
-            <label for="invitationID"> Invitation ID</label>
-            <input class="form-control invitationid" id="invitationID" type="text" name="invitationid">
+        <div class="display-4" id="screen-title">Session Expired </div>
+        <p class="lead mb-2">You're no longer logged in.</p>
+        <div class="row">
+          <div class="col-12">
+            <p class="mb-2">You are trying to access a page that requires you to login. If you have not logged in please do so by clicking the link below. If you have already logged in your session may have expired due to inactivity. Session expiration helps protect your account. You will need to login again to use the system.</p>
           </div>
-          <div class="form-row">
-            <div class="col-xl-6 mx-auto">
-              <div class="form-group">
-                <button class="btn btn-primary login-button btn-block" href="/html/enrollment.html">Contine to Enrollment</button>
-              </div>
-            </div>
-          </div>
-        </form>
+          <div class="col-6 mx-auto"><a class="btn btn-primary btn-block" href="/html/index.html">Login</a></div>
+        </div>
       </div>
     </div>
   </main>

@@ -1,0 +1,13 @@
+extends index.pug
+
+block screen-title
+    .display-4#screen-title Session Expired 
+    p.lead.mb-2 You're no longer logged in.
+   
+    
+block screen-content 
+    .row
+        .col-12
+            p.mb-2 You are trying to access a page that requires you to login. If you have not logged in please do so by clicking the link below. If you have already logged in your session may have expired due to inactivity. Session expiration helps protect your account. You will need to login again to use the system.
+        .col-6.mx-auto
+            a.btn.btn-primary.btn-block(href='/html/index.html') Login

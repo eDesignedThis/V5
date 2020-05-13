@@ -1,12 +1,10 @@
-extends layout.pug
+extends index.pug
 
-block main-content
-  main.h-100.d-flex.fullscreen-bg.flex-column(style='background-image: url("../images/ChairsOnBeach.png")')
-    .row.my-auto.mx-auto.w-100.justify-content-center.p-3
-      .col-12.col-sm-10.col-md-8.col-xl-4.bg-white.text-center.login-box.p-4
-        .display-4 Enrollment
-        p.lead.mb-2 Last Step. 
+block screen-title
+    .display-4#screen-title Enrollment
+    p.lead.mb-2 Last Step. 
 
-        p.mb-2 Just enter a few details about yourself.
-        
-        include ../pug/includes/forms/enrollment.pug
+block screen-content
+    p.mb-2 Just enter a few details about yourself.
+    
+    include ../pug/includes/forms/enrollment.pug

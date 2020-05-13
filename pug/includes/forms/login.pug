@@ -1,9 +1,20 @@
 form#form__login(action="")
-    .form-group
-        label(for="loginEmail")  Email
-        input.form-control#email(type="text" class="loginusername" name='email')
-    .form-group
-        label(for="loginPassword")  Password
-        input.form-control#password(type="password" class="loginusername" name='password')
-    .form-group
-        button.btn.btn-primary.login-button.btn-block(type='submit') Login
+    .form-row
+        .col-12
+            .form-group
+                label(for="loginEmail")  Email
+                input.form-control#email(type="text" class="loginusername" name='email')
+    .form-row
+        .col-12
+            .form-group
+                label(for="loginPassword")  Password
+                input.form-control#password(type="password" class="loginusername" name='password')
+    
+    .form-row
+        .col-xl-6.mx-auto
+            .form-group
+                button.btn.btn-primary.login-button.btn-block(type='submit') Login
+    .form-row
+        .col-xl-6.mx-auto
+            .form-group.text-center
+                a(href="/html/forgot-password.html") Forgot your Password?

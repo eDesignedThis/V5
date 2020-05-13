@@ -27,21 +27,38 @@
   </header>
   <main class="h-100 d-flex fullscreen-bg flex-column" style="background-image: url(&quot;../images/ChairsOnBeach.png&quot;)">
     <div class="row my-auto mx-auto w-100 justify-content-center p-3">
-      <div class="col-12 col-sm-10 col-md-8 col-xl-4 bg-white text-center login-box p-4">
-        <div class="display-4">Great Experiences</div>
+      <div class="col-12 col-sm-10 col-md-8 col-xl-6 bg-white text-center login-box p-4">
+        <div class="display-4" id="screen-title">Great Experiences</div>
         <p class="lead mb-2">Are a click away.</p>
-        <p class="mb-2">Log in below to manage your account. If you are new and have an Invitation ID, <span> <a href="/html/invitation.html">enroll here.</a></span></p>
+        <p class="mb-2">Log in below to manage your account. If you are new to the program and have been issued an Invitation ID, <span> <a href="/html/invitation.html">enroll here.</a></span></p>
         <form id="form__login" action="">
-          <div class="form-group">
-            <label for="loginEmail"> Email</label>
-            <input class="form-control loginusername" id="email" type="text" name="email">
+          <div class="form-row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="loginEmail"> Email</label>
+                <input class="form-control loginusername" id="email" type="text" name="email">
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="loginPassword"> Password</label>
-            <input class="form-control loginusername" id="password" type="password" name="password">
+          <div class="form-row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="loginPassword"> Password</label>
+                <input class="form-control loginusername" id="password" type="password" name="password">
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <button class="btn btn-primary login-button btn-block" type="submit">Login</button>
+          <div class="form-row">
+            <div class="col-xl-6 mx-auto">
+              <div class="form-group">
+                <button class="btn btn-primary login-button btn-block" type="submit">Login</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-xl-6 mx-auto">
+              <div class="form-group text-center"><a href="/html/forgot-password.html">Forgot your Password?</a></div>
+            </div>
           </div>
         </form>
       </div>

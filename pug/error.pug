@@ -1,0 +1,13 @@
+extends index.pug
+
+block screen-title
+    .display-4#screen-title Oops!
+    p.lead.mb-2 There was an error processing your request.
+   
+    
+block screen-content 
+    .row
+        .col-12
+            p.mb-2 The resource can not be found. Please check the address and try again.
+        .col-6.mx-auto
+            a.btn.btn-primary.btn-block(href='/html/index.html') Back to Login

@@ -28,18 +28,63 @@
   <main class="h-100 d-flex fullscreen-bg flex-column" style="background-image: url(&quot;../images/ChairsOnBeach.png&quot;)">
     <div class="row my-auto mx-auto w-100 justify-content-center p-3">
       <div class="col-12 col-sm-10 col-md-8 col-xl-6 bg-white text-center login-box p-4">
-        <div class="display-4">Invitation </div>
-        <p class="lead mb-2">Step <span class="font-weight-bold">1 </span><span>of </span><span class="text-muted">2</span></p>
-        <p class="mb-2">Have you been invited to join our program? Enter your Invitation ID below.</p>
-        <form id="form__invitation" action="">
-          <div class="form-group">
-            <label for="invitationID"> Invitation ID</label>
-            <input class="form-control invitationid" id="invitationID" type="text" name="invitationid">
+        <div class="display-4" id="screen-title">Contact</div>
+        <p class="text-center">If you have a specific question or concern about this program or website that was not addressed, please complete the form below. We will reply to your inquiry within one business day. </p>
+        <form id="form__contact" action="">
+          <div class="form-row">
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="firstname"> First Name</label>
+                <input class="form-control firstName" id="firstName" type="text" name="firstName">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="lastname"> Last Name</label>
+                <input class="form-control lastName" id="lastName" type="text" name="lastName">
+              </div>
+            </div>
+          </div>
+          <div class="form-row"> 
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <input class="form-control emailAddress" id="emailAddress" type="text" name="emailAddress">
+              </div>
+            </div>
+          </div>
+          <div class="form-row"> 
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input class="form-control phoneNumber" id="phoneNumber" type="text" name="phoneNumber">
+              </div>
+            </div>
+          </div>
+          <div class="form-row"> 
+            <div class="col-12"> 
+              <div class="form-group">
+                <label for="communicationPreference">Subject</label>
+                <select class="custom-select">
+                  <option value="1">Email</option>
+                  <option value="2">Push Notification</option>
+                  <option value="3">Text (SMS) Message</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-row"> 
+            <div class="col-12"> 
+              <div class="form-group"> 
+                <label for="contactMessage">Your Message</label>
+                <textarea class="form-control" id="contactMessage" name="contactMessage" rows="3"></textarea>
+              </div>
+            </div>
           </div>
           <div class="form-row">
             <div class="col-xl-6 mx-auto">
               <div class="form-group">
-                <button class="btn btn-primary login-button btn-block" href="/html/enrollment.html">Contine to Enrollment</button>
+                <button class="btn btn-primary login-button btn-block" href="#">Send Message</button>
               </div>
             </div>
           </div>

@@ -40,3 +40,25 @@ $.get("../js/navigation.json", function (nav) {
     }
   }
 });
+
+// Populate The FAQ Page
+$.get("/js/data/faq.json", function (data, i) {
+  console.log(data);
+
+  for (i = 0; i < data.faqs.length; i++) {
+    console.log(data.faqs[i], i);
+
+    $("#accordion__faq").append(`
+    <div class="card text-left">
+            <div class="card-header" id="faq-heading-${i}">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faq-q-${i}" aria-expanded="false" aria-controls="faq-q-${i}">${data.faqs[i].question}</button>
+              </h2>
+            </div>
+            <div class="collapse" id="faq-q-${i}" aria-labelledby="faq-heading-${i}" data-parent="#accordion__faq">
+              <div class="card-body">${data.faqs[i].answer}</div>
+            </div>
+          </div>
+    `);
+  }
+});
