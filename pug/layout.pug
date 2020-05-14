@@ -13,8 +13,18 @@ body
     block header
         include ../pug/includes/header-public.pug
     block main-content
+        main.h-100.d-flex.flex-column
+            
+            //- block inside-content
+            //-   .row.mx-auto.w-100.justify-content-center.p-3
 
-    include ../pug/includes/footer-public.pug
+            block screen-title
+
+            block screen-content
+
+
+    block footer
+      include ../pug/includes/footer-public.pug
 block footer-scripts
   // Optional JavaScript
   // jQuery first, then Popper.js, then Bootstrap JS

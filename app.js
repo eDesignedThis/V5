@@ -3,6 +3,8 @@ console.log("app is running");
 $.get("../js/navigation.json", function (nav) {
   let publicPages = [];
   let privatePages = [];
+  let screenTitle = $("#screen-title");
+  let page = window.location.href;
   for (i = 0; i < nav.navigation.length; i++) {
     //   Check if page is public. If not, it doesn't go into the public banner.
     if (nav.navigation[i].public === true) {
@@ -43,10 +45,10 @@ $.get("../js/navigation.json", function (nav) {
 
 // Populate The FAQ Page
 $.get("/js/data/faq.json", function (data, i) {
-  console.log(data);
+  //   console.log(data);
 
   for (i = 0; i < data.faqs.length; i++) {
-    console.log(data.faqs[i], i);
+    // console.log(data.faqs[i], i);
 
     $("#accordion__faq").append(`
     <div class="card text-left">

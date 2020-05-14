@@ -1,0 +1,17 @@
+extends default.pug
+
+block header
+  include ../pug/includes/header-private.pug
+
+
+block screen-content
+    .row.mx-auto.w-100.justify-content-center.no-gutters
+        //- base width is col-12  
+        include ../pug/includes/components/jumbotron.pug
+        include ../pug/includes/components/welcome-msg.pug
+        include ../pug/includes/components/three-col-grid.pug
+        include ../pug/includes/components/my-awards.pug
+        
+
+block footer
+  include ../pug/includes/footer-private.pug
