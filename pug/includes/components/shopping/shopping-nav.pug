@@ -1,0 +1,47 @@
+.row.mx-auto.align-items-center.text-center
+    .col-9.col-sm-3.order-1
+        a.btn.btn-primary.d-block.d-xl-none#mobile-nav(href="#") Browse
+            span.ml-1.fas.fa-caret-down
+        .dropdown.d-none.d-xl-block
+            button.btn.btn-primary.btn-block.dropdown-toggle#desktop-nav(type='button' aria-expanded='false' data-toggle='dropdown' aria-haspopup='true') Browse
+                
+            .dropdown-menu.shopping-nav-dropdown.bg-white.shadow.lg(aria-labelledby='desktop-nav')
+                .container
+                    .row 
+                        .col-3
+                            ul.list-group.m-0.p-0.list-group-flush#level-one-nav
+                                li.list-group-item 
+                                    a#show-categories(href="#") Shop The Catalog
+                                li.list-group-item 
+                                    a(href="#") Shop Event Tickets
+                                li.list-group-item 
+                                    a(href="#") Shop Travel Destinations
+                        .col-3
+                            ul.list-group.m-0.p-0.list-group-flush#level-two-nav
+
+                        .col-3
+                            ul.list-group.m-0.p-0.list-group-flush#level-three-nav
+                        .col-3#image-col
+                            p Main Column
+    .col-3.col-sm-2.col-lg-1.order-2.order-sm-3
+        .row
+            .col-6.my-auto
+                a(href="./html/wishlist.html")
+                    span.fas.fa-heart
+            .col-6.my-auto
+                a(href="./html/cart.html")
+                    span.fas.fa-shopping-cart
+
+    .col-12.col-sm-7.col-lg-8.mt-3.mt-sm-0.order-3.order-sm-2
+        .input-group
+            .input-group-prepend.d-none.d-sm-block
+                select.custom-select(name="departmentSelect")
+                    option(value="") All Departments
+            input.form-control(type="text")
+            .input-group-append
+                a.btn.btn-primary.btn-block(href="#")
+                    span.fas.fa-search
+    .col-12#side-menu.shadow-lg.bg-white.d-xl-none
+        include ../shopping/shopping-nav-menu.pug
+        
+        

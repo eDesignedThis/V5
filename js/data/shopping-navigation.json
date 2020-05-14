@@ -1,0 +1,27 @@
+{
+  "catalog": [
+    {
+      "id": "Apple",
+      "label": "Apple Store",
+      "url": "",
+      "subcategories": [
+        { "id": "APPMAC", "label": "Mac Systems", "url": "#" },
+        { "id": "APPWCH", "label": "Watches", "url": "#" },
+        { "id": "APPIPOD", "label": "iPods", "url": "#" },
+        { "id": "APPIPAD", "label": "iPads", "url": "#" }
+      ]
+    },
+    {
+      "id": "165797011",
+      "label": "Baby",
+      "url": "",
+      "subcategories": [
+        { "id": "BABCTH", "label": "Clothing", "url": "" },
+        { "id": "BABFED", "label": "Feeding", "url": "" },
+        { "id": "BABGER", "label": "Gear", "url": "" },
+        { "id": "BABNUR", "label": "Nursery", "url": "" },
+        { "id": "BABSAF", "label": "Care & Safety", "url": "" }
+      ]
+    }
+  ]
+}

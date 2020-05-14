@@ -1,5 +1,8 @@
 extends default.pug
 
+block append header-scripts
+  link(rel="stylesheet", href="/css/jquery-stack-menu.min.css")
+
 block header
   include ../pug/includes/header-private.pug
 
@@ -7,8 +10,18 @@ block header
 block screen-content
     .container.py-2
         .row
-            .col-12.text-center
-                h1#screen-title Shopping
-        .row
-            .col-12 
-                p Shopping Navigation Here
+            //- .col-12.text-center
+            //-     h1#screen-title Shopping
+        include ../././pug/includes/components/shopping/shopping-nav.pug
+
+block append footer-scripts
+
+    script(src='/js/jquery-stack-menu.min.js')
+    script.
+        $(document).ready(function(){
+        $("#stack-menu").stackMenu()
+        });
+    script(src='/pug/includes/components/shopping/shopping-nav.js')
+
+
+        
