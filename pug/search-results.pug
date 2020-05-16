@@ -1,0 +1,32 @@
+extends shopping.pug
+
+block shopping-content 
+    .row
+        .col-12.text-center
+            h1#page-title Search Results
+
+        .col-12.col-sm-3
+            p.lead Filter Results
+            p.font-weight-bold Departments
+            ul.list-group.list-group-flush#departments
+                //- Output department list here 
+                //- li.list-group-item.border-0 
+                //-     a(href='#') Item
+              
+
+
+        .col-12.col-sm-9#search-results
+            include ../pug/includes/components/shopping/shopping-breadcrumb.pug
+            p.lead Search Results
+            .row
+                .col-12.text-center
+                    h2.section-title Reward Yourself
+                    include ../././pug/includes/components/shopping/shopping-carousel.pug
+            .row
+                .col-12.text-center
+                    h2.section-title Feautured Products
+                    include ../././pug/includes/components/shopping/shopping-featured-products.pug
+                    
+        
+    
+        

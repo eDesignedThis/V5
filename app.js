@@ -72,27 +72,101 @@ $.get(
     // console.log(items.products);
     let allitems = items.products;
     for (i = 0; i < allitems.length; i++) {
-      // let output = $(".reward-yourself-row").append(`
-      // <div class="col-6 col-lg-3 p-2"><a class="text-center" href="#">
-      // <div class='item-img d-block '>
-      // <img class="mx-auto img-fluid" src="${allitems[i].image}">
-      // </div>
-      //                 <p class="item-title">${allitems[i].name}</p></a></div>
-      // `);
+      let output = $(".reward-yourself-row").append(`
+      <div class="col-6 col-lg-3 p-2"><a class="text-center" href="#">
+      <div class='item-img d-block '>
+      <img class="mx-auto img-fluid" src="${allitems[i].image}">
+      </div>
+                      <p class="item-title">${allitems[i].name}</p></a></div>
+      `);
       // console.log(items.products[i].name);
-      // for (n=0; n<){
-      // }
     }
   }
 );
 
-//Populate
+//Populate Featured Categories
 $.get(
   "https://api.bestbuy.com/v1/categories?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&pageSize=9&show=name,id,subCategories.name,subCategories.id&format=json",
   function (categories) {
-    let allCategories = categories.categories;
-    for (i = 0; i < allCategories.length; i++) {
-      console.log(allCategories[i]);
+    let category = categories.categories;
+    for (i = 0; i < category.length; i++) {
+      // console.log(category[i]);
+      $("#categories").append(`
+      <div class='col-6 col-md-4 mb-4'>
+        <div class='card'>
+          <div class='card-body text-center'>
+              <a href='#'>
+                ${category[i].name}
+              </a>
+          </div>
+        </div>
+      </div>
+     
+      `);
+
+      // Populate Departments Filter
+      $("#departments").append(`
+      <li class='list-group-item border-0 pl-0 pt-0'>
+        <a href='#'>${category[i].name}</a>
+      </li>
+      `);
     }
   }
 );
+
+$.get(
+  "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&sort=bestSellingRank.asc&show=accessories.sku,addToCartUrl,bestSellingRank,categoryPath.id,categoryPath.name,color,condition,customerReviewAverage,customerReviewCount,description,details.name,details.value,dollarSavings,features.feature,freeShipping,frequentlyPurchasedWith.sku,image,includedItemList.includedItem,inStoreAvailability,inStoreAvailabilityText,longDescription,manufacturer,modelNumber,name,onlineAvailability,onlineAvailabilityText,onSale,percentSavings,preowned,regularPrice,relatedProducts.sku,salePrice,shipping,shippingCost,shortDescription,sku,thumbnailImage,type,upc,url&pageSize=20&format=json",
+  function (items) {
+    console.log(items.products);
+    let product = items.products;
+    for (i = 0; i < product.length; i++) {
+      let name = product[i].name;
+      let image = product[i].image;
+
+      $("#featured-products").append(`
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card search-result">
+        <div class="card-body text-left">
+          <div class="item-img d-block mx-auto"><img src="${image}"/></div><a class='item-title' href="#">${name}</a>
+        </div>
+      </div>
+    </div>
+    `);
+    }
+  }
+);
+
+$("#search-pagination").pagination({
+  dataSource: function (done) {
+    $.get(
+      "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&sort=bestSellingRank.asc&show=accessories.sku,addToCartUrl,bestSellingRank,categoryPath.id,categoryPath.name,color,condition,customerReviewAverage,customerReviewCount,description,details.name,details.value,dollarSavings,features.feature,freeShipping,frequentlyPurchasedWith.sku,image,includedItemList.includedItem,inStoreAvailability,inStoreAvailabilityText,longDescription,manufacturer,modelNumber,name,onlineAvailability,onlineAvailabilityText,onSale,percentSavings,preowned,regularPrice,relatedProducts.sku,salePrice,shipping,shippingCost,shortDescription,sku,thumbnailImage,type,upc,url&pageSize=20&format=json",
+      function (items) {
+        console.log(items.products);
+        let product = items.products;
+        for (i = 0; i < product.length; i++) {
+          let name = product[i].name;
+          let image = product[i].image;
+
+          $("#featured-products").append(`
+        <div class="col-6 col-lg-3 mb-4">
+          <div class="card search-result">
+            <div class="card-body text-left">
+              <div class="item-img d-block mx-auto"><img src="${image}"/></div><a class='item-title' href="#">${name}</a>
+            </div>
+          </div>
+        </div>
+        `);
+
+          $(".item-title").each(function (index, element) {
+            $clamp(element, { clamp: 2 });
+          });
+        }
+      }
+    );
+  },
+  pageSize: 5,
+  callback: function (data, pagination) {
+    var html = template(data);
+    dataContainer.html(html);
+  },
+});

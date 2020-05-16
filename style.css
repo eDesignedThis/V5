@@ -94,6 +94,16 @@ form {
   height: 100%;
 }
 
+#search-results .item-img {
+  width: 150px;
+  height: 150px;
+}
+
+.search-result .item-img {
+  width: 120px !important;
+  height: 120px !important;
+}
+
 @media (min-width: 768px) {
   .jumbotron__home {
     background-position: center -100px;

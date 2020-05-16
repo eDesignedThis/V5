@@ -44,6 +44,17 @@ form {
   }
 }
 
+#search-results .item-img {
+  width: 150px;
+  height: 150px;
+}
+
+.search-result {
+  .item-img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
 // Media Queries
 @media (min-width: 576px) {
 }
