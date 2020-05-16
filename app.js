@@ -64,3 +64,35 @@ $.get("/js/data/faq.json", function (data, i) {
     `);
   }
 });
+
+// Shopping Landing Populate Carousel items
+$.get(
+  "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&pageSize=4&format=json",
+  function (items) {
+    // console.log(items.products);
+    let allitems = items.products;
+    for (i = 0; i < allitems.length; i++) {
+      // let output = $(".reward-yourself-row").append(`
+      // <div class="col-6 col-lg-3 p-2"><a class="text-center" href="#">
+      // <div class='item-img d-block '>
+      // <img class="mx-auto img-fluid" src="${allitems[i].image}">
+      // </div>
+      //                 <p class="item-title">${allitems[i].name}</p></a></div>
+      // `);
+      // console.log(items.products[i].name);
+      // for (n=0; n<){
+      // }
+    }
+  }
+);
+
+//Populate
+$.get(
+  "https://api.bestbuy.com/v1/categories?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&pageSize=9&show=name,id,subCategories.name,subCategories.id&format=json",
+  function (categories) {
+    let allCategories = categories.categories;
+    for (i = 0; i < allCategories.length; i++) {
+      console.log(allCategories[i]);
+    }
+  }
+);

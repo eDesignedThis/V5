@@ -9,11 +9,13 @@ block header
 
 block screen-content
     .container.py-2
-        .row
-            //- .col-12.text-center
-            //-     h1#screen-title Shopping
         include ../././pug/includes/components/shopping/shopping-nav.pug
-
+        include ../././pug/includes/components/shopping/shopping-header-image.pug
+        .row
+          .col-12.text-center
+              h1#page-title Reward Yourself
+        include ../././pug/includes/components/shopping/shopping-carousel.pug
+        include ../././pug/includes/components/shopping/shopping-featured-categories.pug
 block append footer-scripts
 
     script(src='/js/jquery-stack-menu.min.js')
