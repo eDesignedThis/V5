@@ -91,7 +91,7 @@ $.get(
     let category = categories.categories;
     for (i = 0; i < category.length; i++) {
       // console.log(category[i]);
-      $("#categories").append(`
+      let item = $("#categories").append(`
       <div class='col-6 col-md-4 mb-4'>
         <div class='card'>
           <div class='card-body text-center'>
@@ -101,7 +101,7 @@ $.get(
           </div>
         </div>
       </div>
-     
+
       `);
 
       // Populate Departments Filter
@@ -115,58 +115,54 @@ $.get(
 );
 
 $.get(
-  "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&sort=bestSellingRank.asc&show=accessories.sku,addToCartUrl,bestSellingRank,categoryPath.id,categoryPath.name,color,condition,customerReviewAverage,customerReviewCount,description,details.name,details.value,dollarSavings,features.feature,freeShipping,frequentlyPurchasedWith.sku,image,includedItemList.includedItem,inStoreAvailability,inStoreAvailabilityText,longDescription,manufacturer,modelNumber,name,onlineAvailability,onlineAvailabilityText,onSale,percentSavings,preowned,regularPrice,relatedProducts.sku,salePrice,shipping,shippingCost,shortDescription,sku,thumbnailImage,type,upc,url&pageSize=20&format=json",
+  "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&sort=bestSellingRank.asc&show=accessories.sku,addToCartUrl,bestSellingRank,categoryPath.id,categoryPath.name,color,condition,customerReviewAverage,customerReviewCount,description,details.name,details.value,dollarSavings,features.feature,freeShipping,frequentlyPurchasedWith.sku,image,includedItemList.includedItem,inStoreAvailability,inStoreAvailabilityText,longDescription,manufacturer,modelNumber,name,onlineAvailability,onlineAvailabilityText,onSale,percentSavings,preowned,regularPrice,relatedProducts.sku,salePrice,shipping,shippingCost,shortDescription,sku,thumbnailImage,type,upc,url&facet=categoryPath.id&pageSize=20&format=json",
   function (items) {
-    console.log(items.products);
     let product = items.products;
+    // console.log(product);
+
     for (i = 0; i < product.length; i++) {
       let name = product[i].name;
       let image = product[i].image;
+      let price = product[i].salePrice;
+      let dataKey = product[i].sku;
 
       $("#featured-products").append(`
     <div class="col-6 col-lg-3 mb-4">
       <div class="card search-result">
         <div class="card-body text-left">
-          <div class="item-img d-block mx-auto"><img src="${image}"/></div><a class='item-title' href="#">${name}</a>
+          <div class="item-img d-block mx-auto"><img src="${image}"/></div><a class='item-title mb-2' href="#">${name}</a>
+          <p>$${price}</p>
+          <a class='btn btn-primary btn-block addtocartbtn' href='#' >Add to Cart</a>
         </div>
       </div>
     </div>
     `);
+
+      if (product[i].onSale == true) {
+        console.log(product[i]);
+        for (j = 0; j < product[i].length; j++) {
+          $(".card-body").append(
+            '<small class="text-success">On Sale!</small>'
+          );
+        }
+      }
+
+      $(".item-title").each(function (index, element) {
+        $clamp(element, { clamp: 2 });
+      });
+
+      $(".addtocartbtn").click(function (e) {
+        let itemSku = e.target.getAttribute("dataKey");
+
+        let activeProduct;
+        console.log(product);
+        for (p = 0; p < product.length; p++) {
+          if (dataKey === product[p].sku) {
+            activeProduct = product[p];
+            // console.log(activeProduct);
+          }
+        }
+      });
     }
   }
 );
-
-$("#search-pagination").pagination({
-  dataSource: function (done) {
-    $.get(
-      "https://api.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=wV0fRPELYjjeNtQRT7LmdGE4&sort=bestSellingRank.asc&show=accessories.sku,addToCartUrl,bestSellingRank,categoryPath.id,categoryPath.name,color,condition,customerReviewAverage,customerReviewCount,description,details.name,details.value,dollarSavings,features.feature,freeShipping,frequentlyPurchasedWith.sku,image,includedItemList.includedItem,inStoreAvailability,inStoreAvailabilityText,longDescription,manufacturer,modelNumber,name,onlineAvailability,onlineAvailabilityText,onSale,percentSavings,preowned,regularPrice,relatedProducts.sku,salePrice,shipping,shippingCost,shortDescription,sku,thumbnailImage,type,upc,url&pageSize=20&format=json",
-      function (items) {
-        console.log(items.products);
-        let product = items.products;
-        for (i = 0; i < product.length; i++) {
-          let name = product[i].name;
-          let image = product[i].image;
-
-          $("#featured-products").append(`
-        <div class="col-6 col-lg-3 mb-4">
-          <div class="card search-result">
-            <div class="card-body text-left">
-              <div class="item-img d-block mx-auto"><img src="${image}"/></div><a class='item-title' href="#">${name}</a>
-            </div>
-          </div>
-        </div>
-        `);
-
-          $(".item-title").each(function (index, element) {
-            $clamp(element, { clamp: 2 });
-          });
-        }
-      }
-    );
-  },
-  pageSize: 5,
-  callback: function (data, pagination) {
-    var html = template(data);
-    dataContainer.html(html);
-  },
-});

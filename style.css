@@ -82,7 +82,7 @@ form {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  margin: auto;
+  margin: 0 auto 1em auto;
 }
 
 .item-img img {
@@ -102,6 +102,10 @@ form {
 .search-result .item-img {
   width: 120px !important;
   height: 120px !important;
+}
+
+.item-title {
+  font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {

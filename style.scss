@@ -35,7 +35,7 @@ form {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  margin: auto;
+  margin: 0 auto 1em auto;
   img {
     object-fit: contain;
     object-position: center;
@@ -54,6 +54,10 @@ form {
     width: 120px !important;
     height: 120px !important;
   }
+}
+
+.item-title {
+  font-size: 0.9rem;
 }
 // Media Queries
 @media (min-width: 576px) {
