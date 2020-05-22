@@ -17,7 +17,9 @@ block shopping-content
 
         .col-12.col-sm-9#search-results
             include ../pug/includes/components/shopping/shopping-breadcrumb.pug
-            p.lead Search Results
+            include ../pug/includes/components/shopping/shopping-horizontal-filter-bar.pug
+
+
             .row
                 .col-12.text-center
                     h2.section-title Reward Yourself
@@ -26,7 +28,14 @@ block shopping-content
                 .col-12.text-center
                     h2.section-title Feautured Products
                     include ../././pug/includes/components/shopping/shopping-featured-products.pug
-                    
+            .row.justify-content-center
+                .col-12
+                    include ../././pug/includes/components/shopping/search-results-pagination.pug
+            
+            .row.justify-content-center 
+                .col-12.text-center.text-muted
+                    small Some content is provided by a third party on an as-is basis. This content is subject to change and/or removal at any time. Points and availability of items are subject to change.
+
         
     
         

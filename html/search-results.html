@@ -68,7 +68,7 @@
         </div>
         <div class="col-12 col-sm-7 col-lg-8 mt-3 mt-sm-0 order-3 order-sm-2">
           <div class="input-group">
-            <div class="input-group-prepend d-none d-sm-block">
+            <div class="input-group-prepend d-none d-lg-block">
               <select class="custom-select" name="departmentSelect">
                 <option value="">All Departments</option>
               </select>
@@ -108,7 +108,24 @@
               <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
           </nav>
-          <p class="lead">Search Results</p>
+          <div class="row align-items-center mb-3 justify-content-between" id="horizontal-filter-bar">
+            <div class="col-12 col-sm-5 col-md-4"> 
+              <p class="mb-sm-0"><span class="font-weight-bold">Items Found</span><span class="ml-1">2092</span></p>
+            </div>
+            <div class="col-12 col-sm-7 col-md-6 col-lg-4 text-left text-lg-right">
+              <div class="row align-items-center">
+                <div class="col-4 col-sm-4 pr-0">
+                  <p class="mb-0 mr-lg-2"> Filter by:</p>
+                </div>
+                <div class="col-8 col-sm-8 pl-0">
+                  <select class="custom-select" name="">
+                    <option value="1">Price Low to High</option>
+                    <option value="2">Price Hight to Low</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-12 text-center">
               <h2 class="section-title">Reward Yourself</h2>
@@ -133,6 +150,22 @@
               <div class="row" id="featured-products"></div>
               <div class="row" id="search-pagination"></div>
             </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <nav class="mx-auto" id="search-pagination" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><a class="page-link prev-btn" href="#" aria-label="Previous"><span class="mr-1" aria-hidden="true">&laquo;</span><span>Previous</span></a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link next-btn" href="#" aria-label="Next"><span class="mr-1">Next</span><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row justify-content-center"> 
+            <div class="col-12 text-center text-muted"><small>Some content is provided by a third party on an as-is basis. This content is subject to change and/or removal at any time. Points and availability of items are subject to change.</small></div>
           </div>
         </div>
       </div>
@@ -163,3 +196,4 @@
 </script>
 <script src="/pug/includes/components/shopping/shopping-nav.js"></script>
 <script src="/js/clamp.min.js"></script>
+<script src="/js/jquery.simplePagination.js"></script>
