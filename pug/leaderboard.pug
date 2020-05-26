@@ -13,6 +13,25 @@ block screen-content
 
         .row
             .col-12
-                h2.h4.border-bottom.mb-3.my-account__section-heading  Leaderboard
+                h2.h4.border-bottom.mb-3.leaderboard__section-heading  Leaderboard
             .col-12 
-                p Leaderboard Option Here
+                ul.list-group#leaderboard
+                    -for(i=0; i< 5; i++)
+                        //- li.list-group-item
+                        //-     .row.mx-auto
+                        //-         .col-3.col-sm-3.col-lg-1.order-1
+                        //-             p.font-weight-bold Rank
+                        //-             p.mb-0 1
+                        //-         .col-5.col-sm-3.col-lg-5.order-2
+                        //-             p.font-weight-bold Name
+                        //-             p.mb-0 Leader Name
+                        //-         .col-4.col-sm-3.order-3.order-sm-4.text-sm-right
+                        //-             p.font-weight-bold Points
+                        //-             p.mb-0 452,304
+                        //-         .col-12.col-sm-3.order-4.order-sm-3.text-sm-center
+                        //-             p.font-weight-bold Region
+                        //-             p.mb-0 North
+
+
+block append footer-scripts
+    script(src='/pug/leaderboard.js')

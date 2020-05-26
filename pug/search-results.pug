@@ -5,7 +5,7 @@ block shopping-content
         .col-12.text-center
             h1#page-title Search Results
 
-        .col-12.col-sm-3
+        .col-12.col-sm-3#vertical-filter-bar
             p.lead Filter Results
             p.font-weight-bold Departments
             ul.list-group.list-group-flush#departments
@@ -15,7 +15,7 @@ block shopping-content
               
 
 
-        .col-12.col-sm-9#search-results
+        .col-12.col-sm-9.col-lg-10#search-results
             include ../pug/includes/components/shopping/shopping-breadcrumb.pug
             include ../pug/includes/components/shopping/shopping-horizontal-filter-bar.pug
 
@@ -36,6 +36,7 @@ block shopping-content
                 .col-12.text-center.text-muted
                     small Some content is provided by a third party on an as-is basis. This content is subject to change and/or removal at any time. Points and availability of items are subject to change.
 
-        
-    
+block append footer-scripts 
+    script(src='/js/clamp.min.js')
+    script(src='/pug/search-results.js')
         

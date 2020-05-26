@@ -44,6 +44,11 @@ form {
   }
 }
 
+// Shopping
+#vertical-filter-bar {
+  position: relative;
+}
+
 #search-results .item-img {
   width: 150px;
   height: 150px;
@@ -59,12 +64,26 @@ form {
 .item-title {
   font-size: 0.9rem;
 }
+
+.is-on-sale {
+  display: none;
+}
+
 // Media Queries
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
   .jumbotron__home {
     background-position: center -100px;
+  }
+
+  #vertical-filter-bar {
+    position: fixed;
+    width: 180px;
+  }
+
+  #search-results {
+    left: 180px;
   }
 }
 @media (min-width: 1024px) {

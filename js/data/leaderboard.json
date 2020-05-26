@@ -1,0 +1,124 @@
+{
+  "leaderboard": [
+    {
+      "first_name": "Hendrik",
+      "last_name": "Herrema",
+      "region": "East",
+      "points_awarded": 330853
+    },
+    {
+      "first_name": "Dallas",
+      "last_name": "Hoonahan",
+      "region": "South",
+      "points_awarded": 434669
+    },
+    {
+      "first_name": "Gayler",
+      "last_name": "Clingan",
+      "region": "North",
+      "points_awarded": 465270
+    },
+    {
+      "first_name": "Phil",
+      "last_name": "Luxton",
+      "region": "West",
+      "points_awarded": 351744
+    },
+    {
+      "first_name": "Dory",
+      "last_name": "Nudde",
+      "region": "West",
+      "points_awarded": 387414
+    },
+    {
+      "first_name": "Nicholas",
+      "last_name": "Simecek",
+      "region": "East",
+      "points_awarded": 458652
+    },
+    {
+      "first_name": "Willy",
+      "last_name": "Delbergue",
+      "region": "South",
+      "points_awarded": 443818
+    },
+    {
+      "first_name": "Lowe",
+      "last_name": "Edland",
+      "region": "West",
+      "points_awarded": 495683
+    },
+    {
+      "first_name": "Odelle",
+      "last_name": "Bogies",
+      "region": "West",
+      "points_awarded": 240754
+    },
+    {
+      "first_name": "Caitlin",
+      "last_name": "Kemmett",
+      "region": "East",
+      "points_awarded": 298970
+    },
+    {
+      "first_name": "Hillary",
+      "last_name": "Adamowitz",
+      "region": "West",
+      "points_awarded": 398306
+    },
+    {
+      "first_name": "Noellyn",
+      "last_name": "Farndale",
+      "region": "East",
+      "points_awarded": 235903
+    },
+    {
+      "first_name": "Brietta",
+      "last_name": "Tilston",
+      "region": "South",
+      "points_awarded": 524289
+    },
+    {
+      "first_name": "Gusella",
+      "last_name": "Terbrug",
+      "region": "South",
+      "points_awarded": 276561
+    },
+    {
+      "first_name": "Yankee",
+      "last_name": "Merton",
+      "region": "West",
+      "points_awarded": 258047
+    },
+    {
+      "first_name": "Tucker",
+      "last_name": "Lismore",
+      "region": "North",
+      "points_awarded": 365256
+    },
+    {
+      "first_name": "Conway",
+      "last_name": "Corke",
+      "region": "South",
+      "points_awarded": 308172
+    },
+    {
+      "first_name": "Lara",
+      "last_name": "Sjollema",
+      "region": "West",
+      "points_awarded": 313870
+    },
+    {
+      "first_name": "Stuart",
+      "last_name": "Swindin",
+      "region": "South",
+      "points_awarded": 415288
+    },
+    {
+      "first_name": "Estele",
+      "last_name": "Hogsden",
+      "region": "East",
+      "points_awarded": 492005
+    }
+  ]
+}

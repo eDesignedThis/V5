@@ -1,0 +1,25 @@
+extends default.pug
+
+block append header-scripts
+  link(rel="stylesheet", href="/css/jquery-stack-menu.min.css")
+
+block header
+  include ../pug/includes/header-private.pug
+
+
+block screen-content
+    .container.py-2
+        include ../././pug/includes/components/shopping/shopping-nav.pug
+        block shopping-content
+          .row.mx-auto
+            .col-12.textcenter
+                
+block append footer-scripts
+
+    script(src='/js/jquery-stack-menu.min.js')
+    script.
+        $(document).ready(function(){
+        $("#stack-menu").stackMenu()
+        });
+    script(src='/pug/includes/components/shopping/shopping-nav.js')
+    script(src='/js/clamp.min.js')
